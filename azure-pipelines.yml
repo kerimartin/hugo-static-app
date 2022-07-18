@@ -13,12 +13,15 @@ steps:
 - checkout: self
   displayName: 'Checkout repository including submodules'
   submodules: true
-- task: HugoTask@1
-  displayName: 'Generate Hugo site'
-  inputs:
-    destination: '$(Build.ArtifactStagingDirectory)/public'
     
 - task: PublishPipelineArtifact@1
   inputs:
-    artifactName: 'hugo-site'
+    targetPath: '$(Pipeline.Workspace)'
+    publishLocation: 'pipeline'
+
+- task: HugoTask@1
+  inputs:
+    source: 
+    destination: 'public'
     targetPath: '$(Build.ArtifactStagingDirectory)/public'
+    
