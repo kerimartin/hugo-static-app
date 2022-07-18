@@ -51,7 +51,7 @@ jobs:
       - uses: chabad360/hugo-actions@master
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          source_dir: 'public'
+          source_dir: './public'
           container_name: '$web'
           connection_string: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_COAST_06A77B903 }}
           sync: 'true'
