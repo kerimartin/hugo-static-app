@@ -53,5 +53,5 @@ jobs:
         with:
           source_dir: 'public'
           container_name: '$web'
-          connection_string: ${{ secrets.ConnectionString }}
+          connection_string: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_COAST_06A77B903 }}
           sync: 'true'
