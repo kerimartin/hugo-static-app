@@ -11,7 +11,6 @@ pool:
 
 steps:
 - checkout: self
-  displayName: 'Checkout repository including submodules'
   submodules: true
     
 - task: PublishPipelineArtifact@1
@@ -19,7 +18,7 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     publishLocation: 'pipeline'
 
-- task: HugoTask@1
+- task: HugoTask@2
   inputs:
     source: 
     destination: 'public'
