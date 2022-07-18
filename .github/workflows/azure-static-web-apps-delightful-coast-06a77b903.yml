@@ -50,7 +50,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: chabad360/hugo-actions@master
+      # set up hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build
+        run: hugo --minify
       - shell: bash
         run: ls -lAF public/
       - uses: bacongobbler/azure-blob-storage-upload@main
