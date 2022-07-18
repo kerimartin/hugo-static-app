@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: chabad360/hugo-actions@master
       - shell: bash
-        run: ls -lAFr
+        run: ls -lAF public/
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: './public'
