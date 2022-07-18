@@ -14,7 +14,7 @@ steps:
   displayName: 'Checkout repository including submodules'
   submodules: true
 
-- task: HugoTaskIsAmbigous@1
+- task: HugoTask@1
   displayName: 'Generate Hugo site'
   inputs:
     destination: '$(Build.ArtifactStagingDirectory)'
