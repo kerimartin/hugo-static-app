@@ -17,10 +17,9 @@ steps:
 - task: HugoTask@1
   displayName: 'Generate Hugo site'
   inputs:
-  destination: '$(Build.ArtifactStagingDirectory)/public'
+    destination: '$(Build.ArtifactStagingDirectory)/public'
     
 - task: PublishPipelineArtifact@0
-  displayName: 'Publish Hugo site as artifact'
   inputs:
     artifactName: 'hugo-site'
-    targetPath: '$(Build.ArtifactStagingDirectory)/pubkic'
+    targetPath: '$(Build.ArtifactStagingDirectory)/public'
