@@ -53,5 +53,5 @@ jobs:
         with:
           source_dir: './public'
           container_name: '$web'
-          connection_string: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_COAST_06A77B903 }}
+          sas_token: 'sp=racw&st=2022-07-18T10:13:27Z&se=2022-07-18T18:13:27Z&spr=https&sv=2021-06-08&sr=c&sig=225r9hFIZKEca%2FUAQezBEHNk2TGzZxbjL7kj7I%2FJCD4%3D'
           sync: 'true'
