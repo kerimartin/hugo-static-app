@@ -53,5 +53,5 @@ jobs:
         with:
           source_dir: './public'
           container_name: '$web'
-          connection_string: DefaultEndpointsProtocol=https;AccountName=myhugoweb;AccountKey=s+4RfDjf8DCKbgX458XZVVHXCugdUifZL7zZE2vd2r28Tet+NpPpVuYkxpCPqox1Cz+S1deggrV0+AStKcVz7w==;EndpointSuffix=core.windows.net
+          connection_string: ${{ secrets.BLOB_CONNECT }}          
           sync: 'true'
