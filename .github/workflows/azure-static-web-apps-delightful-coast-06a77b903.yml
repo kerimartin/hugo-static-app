@@ -53,5 +53,5 @@ jobs:
         with:
           source_dir: 'public'
           container_name: '$web'
-          connection_string: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_COAST_06A77B903 }}
+          connection_string: ${{ DefaultEndpointsProtocol=https;AccountName=myhugoweb;AccountKey=s+4RfDjf8DCKbgX458XZVVHXCugdUifZL7zZE2vd2r28Tet+NpPpVuYkxpCPqox1Cz+S1deggrV0+AStKcVz7w==;EndpointSuffix=core.windows.net }}
           sync: 'true'
