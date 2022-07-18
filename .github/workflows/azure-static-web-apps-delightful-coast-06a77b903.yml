@@ -43,3 +43,15 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_COAST_06A77B903 }}
           action: "close"
+
+  upload:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - uses: chabad360/hugo-actions@master
+      - uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: 'public'
+          container_name: '$web'
+          connection_string: ${{ secrets.ConnectionString }}
+          sync: 'true'
