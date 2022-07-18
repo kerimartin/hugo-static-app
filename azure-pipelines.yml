@@ -18,7 +18,7 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     publishLocation: 'pipeline'
 
-- task: giuliovdev.hugo-extension.hugo-build-task-v2.HugoTask.HugoTask@1
+- task: HugoTask@2
   inputs:
     source: 
     destination: 'public'
