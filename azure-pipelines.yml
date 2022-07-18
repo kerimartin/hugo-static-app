@@ -14,7 +14,7 @@ steps:
   displayName: 'Checkout repository including submodules'
   submodules: true
 
-- task: HugoTask@1
+- task: iuliovdev.hugo-extension.hugo-build-task.HugoTask@1
   displayName: 'Generate Hugo site'
   inputs:
     destination: '$(Build.ArtifactStagingDirectory)'
