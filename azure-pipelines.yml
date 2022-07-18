@@ -7,20 +7,20 @@ trigger:
 - main
 
 pool:
- vmImage: 'vs2017-win2016'
+ vmImage: 'windows-latest'
 
 steps:
 - checkout: self
   displayName: 'Checkout repository including submodules'
   submodules: true
 
-- task: iuliovdev.hugo-extension.hugo-build-task.HugoTask
+- task: HugoTask@1
   displayName: 'Generate Hugo site'
   inputs:
-    destination: '$(Build.ArtifactStagingDirectory)'
+  destination: '$(Build.ArtifactStagingDirectory)/public'
     
 - task: PublishPipelineArtifact@0
   displayName: 'Publish Hugo site as artifact'
   inputs:
     artifactName: 'hugo-site'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    targetPath: '$(Build.ArtifactStagingDirectory)/pubkic'
