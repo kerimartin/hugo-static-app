@@ -2,3 +2,15 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Hugo site for qubiz'
 theme = "ananke"
+
+[params]
+  text_color = ""
+  author = ""
+  favicon = ""
+  site_logo = ""
+  background_color_class = "bg-navy"
+  recent_posts_number = 3
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/GoHugoIO"
