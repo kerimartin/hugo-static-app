@@ -23,4 +23,3 @@ steps:
     source: 
     destination: 'public'
     targetPath: '$(Build.ArtifactStagingDirectory)/public'
-  submodules: true
