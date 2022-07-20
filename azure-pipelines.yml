@@ -13,13 +13,12 @@ steps:
 - checkout: self
   submodules: true
     
-- task: PublishPipelineArtifact@1
+- task: PublishPipelineArtifact@0
+  displayName: 'Publish Hugo site as artifact'
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    publishLocation: 'pipeline'
+    artifactName: 'hugo-site'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
 
 - task: giuliovdev.hugo-extension.hugo-build-task.HugoTask@1
   inputs:
-    source: 
-    destination: 'public'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    destination: '$(Build.ArtifactStagingDirectory)'
