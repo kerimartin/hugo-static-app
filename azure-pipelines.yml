@@ -21,4 +21,5 @@ steps:
 
 - task: giuliovdev.hugo-extension.hugo-build-task.HugoTask@1
   inputs:
-    destination: '$(Build.ArtifactStagingDirectory)'
+    source: '/'
+    destination: 'public'
