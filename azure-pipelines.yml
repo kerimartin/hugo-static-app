@@ -15,7 +15,7 @@ steps:
     
 - bash: |
     sudo apt install -y hugo
-    hugo --minify -o $(Build.ArtifactStagingDirectory)
+    hugo --minify -d $(Build.ArtifactStagingDirectory)
 
 
 
