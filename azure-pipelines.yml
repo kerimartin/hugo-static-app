@@ -28,8 +28,9 @@ steps:
     artifactName: 'hugo-site'
     targetPath: '$(Build.ArtifactStagingDirectory)'
 
-- task: PublishPipelineArtifact@1
+- task: UniversalPackages@0
+  displayName: Universal Publish
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    artifact: 'hugo-pipetifact'
-    publishLocation: 'pipeline'
+    command: publish
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    packagePublishDescription: '<Package description>'
