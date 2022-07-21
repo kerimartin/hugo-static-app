@@ -15,9 +15,12 @@ steps:
     
 - bash: |
     sudo apt install -y hugo
-    hugo --minify -d $(Build.ArtifactStagingDirectory)
+    hugo --minify
 
-
+- task: CopyFiles@2
+  inputs:
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishPipelineArtifact@0
   displayName: 'Publish Hugo site as artifact'
