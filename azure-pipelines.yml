@@ -19,7 +19,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: 'public'
+    Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishPipelineArtifact@0
@@ -27,3 +27,9 @@ steps:
   inputs:
     artifactName: 'hugo-site'
     targetPath: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'hugo-pipetifact'
+    publishLocation: 'pipeline'
