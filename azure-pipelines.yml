@@ -32,5 +32,6 @@ steps:
   displayName: Universal Publish
   inputs:
     command: publish
+    vstsFeedPublish: 'myfirstproject/Hugotest'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     packagePublishDescription: '<Package description>'
