@@ -14,7 +14,7 @@ steps:
   submodules: true
     
 - bash: |
-    apt install -y hugo
+    sudo apt install -y hugo
     hugo
 
 - task: PublishPipelineArtifact@0
