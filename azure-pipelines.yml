@@ -14,7 +14,7 @@ steps:
   submodules: true
     
 
-- task: HugoTask@1
+- task: giuliovdev.hugo-extension.hugo-build-task.HugoTask@1
   inputs:
     source: 
     destination: 'public'
