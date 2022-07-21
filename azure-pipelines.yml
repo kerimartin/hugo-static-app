@@ -19,7 +19,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '**'
+    Contents: 'public'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishPipelineArtifact@0
