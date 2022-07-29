@@ -1,6 +1,10 @@
 ---
-title: "Add some length to this site"
-date: "2022-07-19"
+title: "See some good posts"
+
+description: "The last theme you'll ever need. Maybe."
+theme_version: '2.8.2'
+cascade:
+  featured_image: "/images/otherhero.jpg"
 ---
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
